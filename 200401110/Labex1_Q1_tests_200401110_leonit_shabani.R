@@ -17,7 +17,12 @@ test_that("Test : maps adlı değiken Global Workspace’de mevcuttur.", {
   expect_identical(exists("maps"), T)
 })
 
-#Q 2-6
+# Q 2-6
 test_that("Test: maps nesnesi bir data.frame’dir.", {
   expect_identical(class(maps) == "data.frame", T)
+})
+
+# Q 2-7
+test_that("maps adlı data.frame’in ilk sütunun adı “City” olmalıdır.", {
+  expect_identical(colnames(maps)[1] == "City", T)
 })
