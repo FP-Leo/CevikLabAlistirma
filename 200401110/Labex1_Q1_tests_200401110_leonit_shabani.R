@@ -16,3 +16,8 @@ test_that("Test : MapsThatChangedOurWorld_StoryMap_Data.csv adlı dosya aktif di
 test_that("Test : maps adlı değiken Global Workspace’de mevcuttur.", {
   expect_identical(exists("maps"), T)
 })
+
+#Q 2-6
+test_that("Test: maps nesnesi bir data.frame’dir.", {
+  expect_identical(class(maps) == "data.frame", T)
+})

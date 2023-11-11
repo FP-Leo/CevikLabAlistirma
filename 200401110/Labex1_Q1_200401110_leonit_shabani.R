@@ -14,3 +14,6 @@ indx <- which(findIdx == TRUE)
 #Q 1.5
 maps$Longitude <- gsub(' W','', maps$Longitude)
 maps$Longitude <- gsub(' E','', maps$Longitude)
+
+#Q 1.6
+maps$Year <- as.numeric(gsub(' AD','', maps$Year))
