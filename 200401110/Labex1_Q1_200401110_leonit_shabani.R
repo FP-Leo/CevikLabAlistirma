@@ -6,3 +6,7 @@ maps <- read.csv("MapsThatChangedOurWorld_StoryMap_Data.csv", header=TRUE, sep="
 
 # Q 1.3
 maps$Latitude <- gsub(' N','', maps$Latitude)
+
+#Q 1.4
+findIdx <- grepl("W", maps$Longitude)
+indx <- which(findIdx == TRUE)
