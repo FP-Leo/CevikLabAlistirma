@@ -23,3 +23,6 @@ maps$Latitude <- as.numeric(maps$Latitude)
 
 # Q 1.8
 hist(maps$Year)
+
+# Q 1.9
+maps$Longitude[indx] <- maps$Longitude[indx] * -1

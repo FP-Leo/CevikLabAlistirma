@@ -31,3 +31,8 @@ test_that("Test: maps adlı data.frame’in ilk sütunun adı “City” olmalı
 test_that("Test: maps adlı data.frame’in 5. sütunun adında “Title” kelimesi geçmelidir.", {
   expect_identical(grepl( "Title", colnames(maps)[5], fixed = TRUE), T)
 })
+
+# Q 2-9
+test_that("Test: Latitude adlı sütün numeric değerlerden oluşmalıdır.", {
+  expect_identical(is.numeric(maps$Latitude), T)
+})
