@@ -20,3 +20,6 @@ maps$Year <- as.numeric(gsub(' AD','', maps$Year))
 # Q 1.7
 maps$Longitude <- as.numeric(maps$Longitude)
 maps$Latitude <- as.numeric(maps$Latitude)
+
+# Q 1.8
+hist(maps$Year)

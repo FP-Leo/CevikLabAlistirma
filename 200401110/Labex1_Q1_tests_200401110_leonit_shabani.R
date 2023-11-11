@@ -23,6 +23,11 @@ test_that("Test: maps nesnesi bir data.frame’dir.", {
 })
 
 # Q 2-7
-test_that("maps adlı data.frame’in ilk sütunun adı “City” olmalıdır.", {
+test_that("Test: maps adlı data.frame’in ilk sütunun adı “City” olmalıdır.", {
   expect_identical(colnames(maps)[1] == "City", T)
+})
+
+# Q 2-8
+test_that("Test: maps adlı data.frame’in 5. sütunun adında “Title” kelimesi geçmelidir.", {
+  expect_identical(grepl( "Title", colnames(maps)[5], fixed = TRUE), T)
 })
