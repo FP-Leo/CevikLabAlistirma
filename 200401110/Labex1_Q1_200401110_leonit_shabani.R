@@ -9,7 +9,7 @@ maps$Latitude <- gsub(' N','', maps$Latitude)
 
 # Q 1.4
 findIdx <- grepl("W", maps$Longitude)
-indx <- which(findIdx == TRUE)
+idx <- which(findIdx == TRUE)
 
 # Q 1.5
 maps$Longitude <- gsub('\\s[W|E]','', maps$Longitude)
@@ -25,7 +25,7 @@ maps$Latitude <- as.numeric(maps$Latitude)
 hist(maps$Year)
 
 # Q 1.9
-maps$Longitude[indx] <- maps$Longitude[indx] * -1
+maps$Longitude[idx] <- maps$Longitude[idx] * -1
 
 # Q 1.10
 finalResult <- data.frame(Longitude = maps$Longitude, Latitude=maps$Latitude, Year=maps$Year)

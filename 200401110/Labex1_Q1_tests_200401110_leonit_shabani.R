@@ -48,3 +48,8 @@ test_that("Test: Longitude adlı sütün numeric değerlerden oluşmalıdır.", 
 test_that("Test : Year adlı adlı sütün numeric değerlerden oluşmalıdır.", {
   expect_identical(is.numeric(maps$Year), T)
 })
+
+# Q 2-12
+test_that("Test : idx nesnesi Global Workspace’de mevcuttur.", {
+  expect_identical(exists("idx"), T)
+})
