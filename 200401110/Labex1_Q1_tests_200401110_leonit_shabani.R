@@ -60,6 +60,11 @@ test_that("Test : idx nesnesinin tipi (class’ı) integer’dir.", {
 })
 
 # Q 2-14 BONUS
-test_that("Test : BONUS Longitude adlı sütunun 3.,  9. ve 10. elementleri negatif numeric değerler içermelidir.", {
+test_that("Test : Longitude adlı sütunun 3.,  9. ve 10. elementleri negatif numeric değerler içermelidir.", {
   expect_identical(maps$Longitude[c(3,9,10)] < 0, c(T,T,T))
+})
+
+# Q 2-15 BONUS
+test_that("Test : finalResult adlı değiken vardır, bir data.frame’dir, 3 sütundan oluşmalıdır ve sütün isimleri sırasıyla Longitude, Latitude ve Year olmalıdır.", {
+  expect_identical(exists("finalResult") && class(finalResult) == "data.frame"  && length(finalResult) == 3 && colnames(finalResult)[1] == "Longitude" && colnames(finalResult)[2] == "Latitude" && colnames(finalResult)[3] == "Year", T)
 })
