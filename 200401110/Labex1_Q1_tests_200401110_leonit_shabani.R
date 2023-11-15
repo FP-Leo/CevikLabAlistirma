@@ -53,3 +53,8 @@ test_that("Test : Year adlı adlı sütün numeric değerlerden oluşmalıdır."
 test_that("Test : idx nesnesi Global Workspace’de mevcuttur.", {
   expect_identical(exists("idx"), T)
 })
+
+# Q 2-13
+test_that("Test : idx nesnesinin tipi (class’ı) integer’dir.", {
+  expect_identical(typeof(idx) == "integer", T)
+})
