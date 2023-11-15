@@ -1,3 +1,5 @@
+library(testthat)
+
 # Q 2-2
 rm(list = ls())
 if(file.exists("MapsThatChangedOurWorld_StoryMap_Data.csv")){
@@ -35,4 +37,9 @@ test_that("Test: maps adlı data.frame’in 5. sütunun adında “Title” keli
 # Q 2-9
 test_that("Test: Latitude adlı sütün numeric değerlerden oluşmalıdır.", {
   expect_identical(is.numeric(maps$Latitude), T)
+})
+
+# Q 2-10
+test_that("Test: Longitude adlı sütün numeric değerlerden oluşmalıdır.", {
+  expect_identical(is.numeric(maps$Longitude), T)
 })
