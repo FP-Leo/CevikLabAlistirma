@@ -58,3 +58,8 @@ test_that("Test : idx nesnesi Global Workspace’de mevcuttur.", {
 test_that("Test : idx nesnesinin tipi (class’ı) integer’dir.", {
   expect_identical(typeof(idx) == "integer", T)
 })
+
+# Q 2-14 BONUS
+test_that("Test : BONUS Longitude adlı sütunun 3.,  9. ve 10. elementleri negatif numeric değerler içermelidir.", {
+  expect_identical(maps$Longitude[c(3,9,10)] < 0, c(T,T,T))
+})
