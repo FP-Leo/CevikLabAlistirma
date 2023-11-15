@@ -30,7 +30,7 @@ test_that("Test: maps adlı data.frame’in ilk sütunun adı “City” olmalı
 })
 
 # Q 2-8
-test_that("Test: maps adlı data.frame’in 5. sütunun adında “Title” kelimesi geçmelidir.", {
+test_that("Test: maps adlı data.frame’in 5. sütunun adındaz “Title” kelimesi geçmelidir.", {
   expect_identical(grepl( "Title", colnames(maps)[5], fixed = TRUE), T)
 })
 
@@ -42,4 +42,9 @@ test_that("Test: Latitude adlı sütün numeric değerlerden oluşmalıdır.", {
 # Q 2-10
 test_that("Test: Longitude adlı sütün numeric değerlerden oluşmalıdır.", {
   expect_identical(is.numeric(maps$Longitude), T)
+})
+
+# Q 2-11
+test_that("Test : Year adlı adlı sütün numeric değerlerden oluşmalıdır.", {
+  expect_identical(is.numeric(maps$Year), T)
 })
